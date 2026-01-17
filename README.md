@@ -21,6 +21,12 @@ A comprehensive image processing library built on fluent API design, featuring T
 
 ```bash
 pip install image_toolkit
+
+# Dev installation
+pip install -e .
+
+# Install from GitHub repository
+pip install git+https://github.com/droyed/image_toolkit.git 
 ```
 
 Optional dependencies:

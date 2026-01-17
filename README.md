@@ -104,7 +104,7 @@ dataset = (BatchImageHandler.from_directory("raw_photos/", "*.jpg")
 
 ## Comparison
 
-### `ImageHandler` vs alternatives
+I. `ImageHandler` vs alternatives
 
 | Feature | ImageHandler | PIL/Pillow | OpenCV | scikit-image |
 |---------|-------------|-----------|--------|--------------|
@@ -116,7 +116,7 @@ dataset = (BatchImageHandler.from_directory("raw_photos/", "*.jpg")
 | **Best For** | ML preprocessing, pipelines | General image I/O | Real-time CV | Scientific analysis |
 
 
-### `BatchImageHandler` vs alternatives
+II. `BatchImageHandler` vs alternatives
 
 | Feature | BatchImageHandler | ImageHandler | torchvision | PIL/Pillow |
 |---------|-------------------|--------------|-------------|------------|

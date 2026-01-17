@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "image_toolkit"
+version = "0.1.0"
+description = "Modular image processing library with batch support."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Diva", email = "diva@example.com"} # Placeholder as email is unknown
+]
+dependencies = [
+    "numpy",
+    "Pillow",
+    "PyTurboJPEG",
+    "tqdm",
+    "imagehash",
+    "matplotlib",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Scientific/Engineering :: Image Processing",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov",
+    "flake8",
+    "mypy",
+    "black",
+    "isort",
+]
+ml = [
+    "torch",
+    "torchvision",
+    "scikit-learn",
+]
+exif = [
+    "PyExifTool",
+]
+all = [
+    "torch",
+    "torchvision",
+    "scikit-learn",
+    "PyExifTool",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["image_toolkit*"]
+
+[tool.setuptools.package-data]
+image_toolkit = ["py.typed"]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/image_toolkit"
+Documentation = "https://github.com/yourusername/image_toolkit/blob/main/docs/README_detailed.md"
+Changelog = "https://github.com/yourusername/image_toolkit/blob/main/CHANGELOG.md"
+Issues = "https://github.com/yourusername/image_toolkit/issues"

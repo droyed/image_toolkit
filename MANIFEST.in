@@ -1,0 +1,49 @@
+# Include documentation files
+include README.md
+include LICENSE
+include CHANGELOG.md
+include CONTRIBUTING.md
+include Makefile
+
+# Include package data
+include src/image_toolkit/py.typed
+
+# Include all documentation
+recursive-include docs *.md
+recursive-include docs *.rst
+recursive-include docs *.txt
+
+# Include example assets
+recursive-include assets *.jpg
+recursive-include assets *.jpeg
+recursive-include assets *.png
+recursive-include assets *.gif
+recursive-include assets *.md
+recursive-include assets *.txt
+
+# Include test files (useful for users who want to run tests)
+recursive-include tests *.py
+recursive-include tests *.md
+include run_all_tests.py
+
+# Include configuration files
+include pyproject.toml
+
+# Exclude development and build artifacts
+global-exclude __pycache__
+global-exclude *.py[co]
+global-exclude .DS_Store
+global-exclude *.so
+global-exclude *.dylib
+global-exclude .git*
+global-exclude *.egg-info
+
+# Exclude development plans (internal documentation)
+recursive-exclude dev-implementation-plans *
+recursive-exclude .claude *
+recursive-exclude .vscode *
+
+# Exclude build directories
+prune build
+prune dist
+prune .eggs

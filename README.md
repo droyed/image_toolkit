@@ -20,6 +20,7 @@ A comprehensive image processing library built on fluent API design, featuring T
 ## Installation
 
 ```bash
+# Normal installation
 pip install image_toolkit
 
 # Dev installation

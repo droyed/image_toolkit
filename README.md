@@ -102,6 +102,35 @@ dataset = (BatchImageHandler.from_directory("raw_photos/", "*.jpg")
 - **Parallel Processing**: Up to 6x speedup with 8 workers
 - **Memory Efficient**: Process datasets 10x larger than RAM via chunking
 
+## Comparison
+
+### `ImageHandler` vs alternatives
+
+| Feature | ImageHandler | PIL/Pillow | OpenCV | scikit-image |
+|---------|-------------|-----------|--------|--------------|
+| **Ease of Use** | Chainable API | Verbose | Moderate | Moderate |
+| **Memory Control** | Explicit (unload) | Manual | Manual | Manual |
+| **ML Integration** | Built-in (tensor/array) | Manual conversion | NumPy only | NumPy only |
+| **EXIF Handling** | Automatic | Basic | Limited | None |
+| **Performance** | Good (PIL-based) | Good | Excellent | Good |
+| **Best For** | ML preprocessing, pipelines | General image I/O | Real-time CV | Scientific analysis |
+
+
+### `BatchImageHandler` vs alternatives
+
+| Feature | BatchImageHandler | ImageHandler | torchvision | PIL/Pillow |
+|---------|-------------------|--------------|-------------|------------|
+| **Batch operations** | ✅ Optimized | ❌ Single only | ✅ Yes | ❌ Single only |
+| **Parallel processing** | ✅ Built-in | ❌ No | ❌ Manual | ❌ Manual |
+| **Memory efficiency** | ✅ Chunk processing | ✅ Lazy loading | ⚠️ Manual | ⚠️ Manual |
+| **ML integration** | ✅ Direct export | ⚠️ Manual | ✅ Native | ❌ Manual |
+| **Duplicate detection** | ✅ Built-in | ❌ No | ❌ No | ❌ No |
+| **Error resilience** | ✅ Automatic | ⚠️ Manual | ❌ Raises | ❌ Raises |
+| **Best for** | Batch datasets | Single images | PyTorch pipelines | Low-level control |
+| **Learning curve** | Medium | Low | Medium | Low |
+| **Performance** | Fast (parallel) | Fast | Very fast (GPU) | Medium |
+
+
 ## Documentation Index
 
 ### User Guides

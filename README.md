@@ -139,21 +139,3 @@ Images used in this project are from the Oxford-IIIT Pet Dataset by Omkar M. Par
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Citation
-
-```bibtex
-@software{image_toolkit,
-  author = {Roy, Divakar},
-  title = {image_toolkit: High-Performance Python Image Processing with ML-First Design},
-  year = {2026},
-  version = {0.1.0},
-  url = {https://github.com/yourusername/image_toolkit}
-}
-```
-
----
-
-**Get Started:** `pip install image_toolkit`
-
-For detailed documentation, see [README_detailed.md](docs/README_detailed.md)

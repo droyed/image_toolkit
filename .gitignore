@@ -141,13 +141,6 @@ Thumbs.db
 *.bak
 
 # Project-specific
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.bmp
-*.tiff
-*.tif
 output/
 temp/
 tmp/

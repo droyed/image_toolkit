@@ -30,14 +30,6 @@ pip install -e .
 pip install git+https://github.com/droyed/image_toolkit.git 
 ```
 
-Optional dependencies:
-```bash
-pip install "image_toolkit[ml]"    # PyTorch support
-pip install "image_toolkit[exif]"  # Advanced EXIF handling
-pip install "image_toolkit[dev]"   # Development tools
-pip install "image_toolkit[all]"   # Everything
-```
-
 ## Quick Start
 
 ### Single Image Processing
